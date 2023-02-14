@@ -26,4 +26,3 @@ ROUTES
 - [x] state (string)
 - [x] cuisines (string)
 - [x] pic (string)
-- []
