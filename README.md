@@ -1,5 +1,6 @@
-# rest-rant
-### by Meroni
+# REST-rant APP
+## REST-Rant is an app where users can review restaurants.
+##### by Meroni
 
 
 ROUTES
@@ -17,3 +18,12 @@ ROUTES
 |POST    | /places/:id/rant         | Create a rant (comment) about a particular place|
 |DELETE  | /places/:id/rant/:rantId | Delete a rant (comment) about a particular place|
 |GET     | *                        | 404 page (matches any route not defined above)  |
+
+
+## Data for places
+- [x] name (string)
+- [x] city (string)
+- [x] state (string)
+- [x] cuisines (string)
+- [x] pic (string)
+- []
