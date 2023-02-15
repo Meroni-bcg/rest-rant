@@ -1,31 +1,42 @@
 
+
 const router = require('express').Router();
+const places = require('../models/places.js');
+
+router.post('/', (req, res) => {
+	console.log(req.body);
+	if (!req.body.pic) {
+		// Default image if one is not provided
+		req.body.pic = 'http://placekitten.com/400/400';
+	}
+	if (!req.body.city) {
+		req.body.city = 'Anytown';
+	}
+	if (!req.body.state) {
+		req.body.state = 'USA';
+	}
+	places.push(req.body);
+	res.redirect('/places');
+});
 
 router.get('/new', (req, res) => {
-	res.render('places/new')
-  })  
+	res.render('places/new');
+});
+
+router.get('/:id', (req, res) => {
+	let id = Number(req.params.id);
+	if (isNaN(id)) {
+		res.render('error404');
+	} else if (!places[id]) {
+		res.render('error404');
+	} else {
+		res.render('places/show', {place: places[id]});
+	}
+});
 
 router.get('/', (req, res) => {
-	let places = [
-		{
-			name: "Meroni Eats",
-    city: "Henderson",
-    state: "NV",
-    cuisines: "seafood",
-    pic: "https://www.google.com/aclk?sa=l&ai=DChcSEwi-ncDuypb9AhVtD60GHeS0B_8YABADGgJwdg&sig=AOD64_2dNStxILM650sbQEakkMVf5HvLEA&adurl&ctype=5&ved=2ahUKEwjCrLPuypb9AhUvLUQIHY42DncQvhd6BAgBEHQ",
-		},
-		{
-            name: "Larky Drinks",
-            city: "Henderson",
-            state: "NV",
-            cuisines: "mexican cafe",
-            pic: "https://www.mexicoinmykitchen.com/wp-content/uploads/2012/11/cafe-de-olla-recipe-mexican-coffee-1.jpg"
-		},
-	];
-
 	res.render('places/index', {places});
 });
 
 module.exports = router;
-  
   
