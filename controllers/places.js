@@ -1,41 +1,31 @@
-const router = require('express').Router()
+
+const router = require('express').Router();
+
+router.get('/new', (req, res) => {
+	res.render('places/new')
+  })  
 
 router.get('/', (req, res) => {
-    res.send('GET/places')
-})
+	let places = [
+		{
+			name: "Meroni Eats",
+    city: "Henderson",
+    state: "NV",
+    cuisines: "seafood",
+    pic: "https://www.google.com/aclk?sa=l&ai=DChcSEwi-ncDuypb9AhVtD60GHeS0B_8YABADGgJwdg&sig=AOD64_2dNStxILM650sbQEakkMVf5HvLEA&adurl&ctype=5&ved=2ahUKEwjCrLPuypb9AhUvLUQIHY42DncQvhd6BAgBEHQ",
+		},
+		{
+            name: "Larky Drinks",
+            city: "Henderson",
+            state: "NV",
+            cuisines: "mexican cafe",
+            pic: "https://www.mexicoinmykitchen.com/wp-content/uploads/2012/11/cafe-de-olla-recipe-mexican-coffee-1.jpg"
+		},
+	];
 
-let places = [{
-    name: ,
-    city: ,
-    state: ,
-    cuisines: ,
-    pic: ,
-}]
-res.render('places/index', { places })
+	res.render('places/index', {places});
+});
 
-router.post('/', (req, res) => {
-    res.send('POST /places stub')
-})
-router.get('/new', (req, res) => {
-    res.send('GET /places/new stub')
-})
-router.get('/:id', (req, res) => {
-    res.send('GET /places/:id stub')
-})
-router.put('/:id', (req, res) => {
-    res.send('PUT /places/:id stub')
-})
-router.delete('/:id', (req, res) => {
-    res.send('DELETE /places/:id stub')
-})
-router.get('/:id/edit', (req, res) => {
-    res.send('GET /places/:id/edit stub')
-})
-router.post('/:id/rant', (req, res) => {
-    res.send('GET /places/:id/rant stub')
-})
-router.delete('/:id/rant/:rantId', (req, res) => {
-    res.send('GET /places/:id/rant/:rantId stub')
-})
-
-module.exports = router
+module.exports = router;
+  
+  
