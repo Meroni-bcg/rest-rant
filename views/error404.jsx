@@ -5,9 +5,9 @@ function Error404() {
     return (
         <Def>
             <h1>404: Page Not Found</h1>
-            <p>Oopsy! Seems like somethin went wrong ...</p>
+            <p>Oopsy! Seems like something went wrong ...</p>
             <div style={{ position: 'relative' }}>
-                <img src="Public/sorrysmile.jpeg" alt="sad smiley" width="300" />
+                <img src="public/images/sorrysmile.jpeg" alt="sad smiley" width="300" />
                 <div className='attribution'>
                     Photo found on <a href='http://www.femalefirst.co.uk/image-library/square/500/e/excuse-me-5079442640.jpg'></a>
                 </div>

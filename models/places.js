@@ -1,13 +1,17 @@
 module.exports = [{
-    name: 'H-Thai-ML',
-    city: 'Seattle',
-    state: 'WA',
-    cuisines: 'Thai, Pan-Asian',
-    pic: '/images/h-thai-ml-tables.jpg'
+    name: 'Meroni Eats Cafe',
+    city: 'Henderson',
+    state: 'NV',
+    cuisines: 'Afghan',
+    pic: 'public/images/afghan-kitchen.jpeg',
+   
+    
 }, {
-    name: 'Coding Cat Cafe',
-    city: 'Phoenix',
-    state: 'AZ',
+    name: 'Larky Drinks',
+    city: 'Hendertucky',
+    state: 'NV',
     cuisines: 'Coffee, Bakery',
-    pic: '/images/coffee-cat.jpg'
+    pic: 'public/images/coffeecookie.jpeg'
+    
+
 }]

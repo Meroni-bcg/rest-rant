@@ -14,7 +14,7 @@ function Index(props) {
                             <div key={index} className="col-sm-6">
                                 <h2>{place.name}</h2>
                                 <p className='text-center'>{place.cuisines}</p>
-                                {(place.pic !== 'Public/restaurantIMG.jpeg')
+                                {(place.pic !== 'public/images/restaurantIMG.jpeg')
                                     ? <div className='img-container'>
                                         <img className="restaurant-img" src={place.pic} alt={place.name} />
                                         <div className='attribution'>
